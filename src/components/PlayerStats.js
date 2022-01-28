@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 
 const PlayerStats = ({ name, stats }) => {
@@ -6,11 +7,17 @@ const PlayerStats = ({ name, stats }) => {
   return (
     <div className="stats-container">
       <h2>{name}</h2>
-      <h3>Games played: {totalGames} ({`W-${won} L-${lost} D-${draw}`})</h3>
+      <h3>
+        Games played: {totalGames} ({`W-${won} L-${lost} D-${draw}`})
+      </h3>
       <h3>Win ratio: {stats.winratio.toFixed(2) * 100} %</h3>
       <h3>Favourite hand: {stats.favouriteHand}</h3>
     </div>
-  )
-}
+  );
+};
 
-export default PlayerStats
+PlayerStats.propTypes = {
+  name: propTypes.string.isRequired,
+  stats: propTypes.object.isRequired,
+};
+export default PlayerStats;

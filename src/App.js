@@ -1,11 +1,9 @@
-import {
-  BrowserRouter as Router,
-  Switch, Route
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import LiveGames from "./components/LiveGames";
 import { io } from "socket.io-client";
-import '../src/styles.css'
+import "../src/styles.css";
 import RecentGames from "./components/RecentGames";
 import Searchbar from "./components/Searchbar";
 import Home from "./components/Home";
@@ -13,48 +11,43 @@ import PlayerPage from "./components/PlayerPage";
 import Navbar from "./components/Navbar";
 const socket = io("ws://localhost:3000");
 
-
 function App() {
-
   const [livegames, setLiveGames] = useState([]);
   const [recentGames, setRecentGames] = useState([]);
 
   useEffect(() => {
     socket.on("connect", () => {
-      console.log("connected")
+      console.log("connected");
     });
 
-    socket.on('live games', (message) => {
+    socket.on("live games", (message) => {
       setLiveGames(message.data.ongoingGames);
-    })
+    });
 
-    socket.on('recent history', (message) => {
+    socket.on("recent history", (message) => {
       setRecentGames(message.data.recentGames);
-    })
+    });
 
     socket.on("disconnect", () => {
-      console.log("socket disconnected")
-    })
+      console.log("socket disconnected");
+    });
 
     fetch("http://localhost:3000/games/recent")
-      .then(data => data.json())
-      .then(data => {
+      .then((data) => data.json())
+      .then((data) => {
         setRecentGames(data);
         console.log("fetched from db");
-      }
-      )
-      .catch(err => console.log(err.message))
+      })
+      .catch((err) => console.log(err.message));
 
     fetch("http://localhost:3000/games/live")
-      .then(data => data.json())
-      .then(data => {
+      .then((data) => data.json())
+      .then((data) => {
         setLiveGames(data);
         console.log("fetched from db");
-      }
-      )
-      .catch(err => console.log(err.message))
-  }, [])
-
+      })
+      .catch((err) => console.log(err.message));
+  }, []);
 
   return (
     <div className="App">
