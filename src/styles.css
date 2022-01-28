@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Manrope:wght@500&display=swap");
+@import url("http://fonts.cdnfonts.com/css/hadassah-friedlaender");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*:not(h1, h3) {
+  font-family: "Roboto";
+}
+body {
+  background-color: rgb(157, 157, 204);
+  width: 95%;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.live-game-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  align-items: center;
+  width: 20%;
+  min-width: 300px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.live-game {
+  margin: 10px;
+  font-size: small;
+  border-bottom: 1px solid lightgray;
+  width: 90%;
+}
+.players-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+
+.vs {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.winner {
+  color: green;
+}
+.loser {
+  color: red;
+}
+.draw {
+  color: gray;
+}
+
+.winner,
+.loser,
+.draw {
+  font-size: 18px;
+}
+
+.history-item {
+  width: 40%;
+  min-width: 250px;
+  border-bottom: 1px solid lightgray;
+  margin: 5px;
+}
+.game-winner {
+  background-color: rgb(210, 255, 198);
+}
+.game-loser {
+  background-color: rgb(255, 200, 200);
+}
+
+.game-draw {
+  background-color: rgb(235, 235, 235);
+}
+.recent-games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border-radius: 10px;
+  margin: 10px auto;
+  background-color: white;
+  box-shadow: 5px 5px black;
+}
+
+.recent-games h2 {
+  margin: 20px;
+}
+
+.recent-games-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.home-container {
+  min-height: 200px;
+  height: 50%;
+  width: 100%;
+  background-color: rgb(157, 157, 204);
+  overflow: hidden;
+  position: relative;
+}
+
+.home-item-container {
+  position: relative;
+  max-width: 700px;
+  left: 50%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-family: "Gloria Hallelujah";
+}
+
+.home-item-container h1 {
+  margin-top: 20px;
+  font-size: 45px;
+}
+
+.home-item {
+  text-align: center;
+  margin: 10px;
+}
+
+.searchbar {
+  border: none;
+  border-radius: 3px;
+  padding: 12px 3px;
+  outline: none;
+  width: 400px;
+  box-shadow: 2px 2px black;
+}
+
+.searchbar-small {
+  border: none;
+  border-radius: 3px;
+  padding: 6px 3px;
+  outline: none;
+  width: 200px;
+  box-shadow: 2px 2px black;
+}
+.search-bar:focus {
+  border: 1px solid black;
+}
+
+.button {
+  padding: 11px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: orange;
+  border: none;
+  margin: 3px;
+  cursor: pointer;
+  box-shadow: 2px 2px black;
+}
+
+.button-small {
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: orange;
+  border: none;
+  margin: 3px;
+  cursor: pointer;
+  box-shadow: 2px 2px black;
+}
+
+.button:hover,
+.button-small:hover {
+  background-color: rgb(255, 182, 46);
+}
+.player-page {
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+.stats-container {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}
+
+nav {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  font-family: "Gloria Hallelujah";
+  margin-right: 10px;
+}
