@@ -10,7 +10,7 @@ const Home = () => {
         <Searchbar />
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Home;
