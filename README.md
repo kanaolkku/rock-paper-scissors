@@ -1,5 +1,6 @@
 # Rock Paper Scissors - live games and statistics
 
+Live demo: https://blooming-river-03750.herokuapp.com/
 ## Images of the project
 Landing page:
 ![image](https://user-images.githubusercontent.com/47157255/151853690-60a99371-7422-42dd-9309-5b98901e0359.png)
