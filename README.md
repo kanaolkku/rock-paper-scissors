@@ -1,5 +1,7 @@
 # Rock Paper Scissors - live games and statistics
 
+## Live games are currently down as the api was shut down  -- I might create my own api in the near future though!
+
 Live demo: https://blooming-river-03750.herokuapp.com/
 ## Images of the project
 Landing page:
